@@ -2,6 +2,7 @@ package com.lawani.webservices.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,7 @@ public class Project {
 	private String projectName;
 	@NotBlank(message = "Project Identifier cannot be empty")
 	@Size(min = 5, max = 7, message = "Please use 5 to 7 characters")
-
+    @Column(updatable = false, unique = true)
 	private String projectIdentifier;
 	@NotBlank(message = "Project description cannot be empty")
 
