@@ -11,10 +11,10 @@ import com.lawani.webservices.domain.Project;
 public interface ProjectRepository extends CrudRepository<Project, Long>{
 
 
-
+Project findByProjectIdentifier(String projectIdentifier);
 
 	@Override
-	 Iterable<Project> findAllById(Iterable<Long> iterable) ;
+	 Iterable<Project> findAll() ;
 
 	
 
